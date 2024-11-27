@@ -1,0 +1,26 @@
+.sprite {
+  background: url(char113.png);
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: 150px;
+  left: 300px;
+}
+
+.sprite::after {
+  content: attr(data-score);
+  top: -10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.sprite:hover::after {
+  opacity: 1;
+}
+.sprite[data-score="5"] {
+  color: greenyellow;
+  background-position: 128px 32px;
+}
+.sprite[data-score="10"] {
+  color: red;
+  background-position: 128px 64px;
+}
